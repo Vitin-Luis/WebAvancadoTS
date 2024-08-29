@@ -1,24 +1,12 @@
-function soma(x : number, y : number)
-{
-    return x + y;
-}
+import express from "express";
 
-function multiplicacao(x : number, y : number)
-{
-    return x * y;
-}
+import UserRouter from "./routes/UserRoutes";
 
-function divisao(x : number, y : number)
-{
-    return x / y;
-}
+const app = express();
+app.use(express.json());
 
-function subtracao(x : number, y: number)
-{
-    return x - y;
-}
+app.use(UserRouter);
 
-console.log("Soma: " + soma(10, 20));
-console.log("\nMultiplicação: " + multiplicacao(10, 20));
-console.log("\nDivisão: " + divisao(10, 20));
-console.log("\nSubtracão: " + subtracao(10, 20));
+app.listen(3000, function () {
+  console.log("Servidor rodando na porta 3000");
+});
