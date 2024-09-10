@@ -12,7 +12,6 @@ class UserController {
     async listUser(req: Request, res: Response){
         try {
             const users = await prisma.user.findMany();
-  
             res.json(users)
         }catch(error){
             console.log(error);
@@ -24,9 +23,8 @@ class UserController {
 
     async createUser(req: Request, res: Response){
         try {
-            const userdata = req.body.user;
-            
-            console.log(userdata);
+            const userdata = req.body;
+        
             if (!userdata.email) {
               return res.status(400).json({
                 status: 400,

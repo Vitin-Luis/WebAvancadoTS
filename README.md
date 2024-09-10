@@ -1,3 +1,12 @@
+## Projeto API
+
+Este projeto foi criado com o intuito de aprimorar meu conhecimento sobre APIs e aprender como funciona o desenvolvimento utilizando ferramentas como:
+
+- Typescript
+- Prisma
+- Groq
+- Node
+
 ## Lista de comandos usados no projeto
 
 - npm init -y
