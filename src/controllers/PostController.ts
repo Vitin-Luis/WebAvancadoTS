@@ -55,11 +55,18 @@ class PostController{
         try{
             const postId = req.params.id
 
-            await prisma.post.delete({
+            await prisma.comment.deleteMany({
                 where: {
-                    id: parseInt(postId)
+                  postId: parseInt(postId),
                 },
-            })
+              });
+              
+              await prisma.post.delete({
+                where: {
+                  id: parseInt(postId),
+                },
+              });
+              
         }catch(error){
             console.log(error);
             res.json({
