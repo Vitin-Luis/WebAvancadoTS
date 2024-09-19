@@ -1,6 +1,6 @@
 import Groq from "groq-sdk"
 
-const groq = new Groq({ apiKey: process.env.GROQ_API_KEY });
+const groq = new Groq({ apiKey: process.env.GROQ_API_KEY});
 
 export default async function VerifyComment(comment: string){
     const response = await groq.chat.completions.create({

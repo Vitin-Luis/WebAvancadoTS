@@ -1,5 +1,4 @@
 import { Request, Response } from "express";
-
 import { PrismaClient } from "@prisma/client";
 import VerifyComment from "../utils/GroqAI";
 
