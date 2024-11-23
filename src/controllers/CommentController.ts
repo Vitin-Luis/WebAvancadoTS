@@ -1,6 +1,7 @@
 import { Request, Response } from "express";
+
 import { PrismaClient } from "@prisma/client";
-import VerifyComment from "../utils/GroqAI";
+import VerifyComment from "../utils/VerifyComment";
 
 const prisma = new PrismaClient();
 

@@ -16,6 +16,7 @@ model Post {
   title      String
   content    String?
   published  Boolean   @default(false)
+  isOfensive Boolean   @default(false)
   author     User      @relation(fields: [authorId], references: [id])
   authorId   Int
   comments   Comment[]
@@ -26,6 +27,7 @@ model Comment {
   title      String
   content    String
   published  Boolean @default(false)
+  isOfensive Boolean @default(false)
   author     User    @relation(fields: [authorId], references: [id])
   authorId   Int
   post       Post    @relation(fields: [postId], references: [id])
